@@ -1,2 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿internal class Program 
+{
+    private static void Main(string[] args)
+    {
+        Console.Write("Nhap vao du lieu");
+        string str =Console.ReadLine();
+        Console.WriteLine("Du Lieu vua nhap vao la" + str);
+    }
+}
