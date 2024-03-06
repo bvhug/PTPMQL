@@ -1,3 +1,4 @@
+using BaiThucHanh.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BaiThucHanh.Controllers;
@@ -8,9 +9,9 @@ namespace BaiThucHanh.Controllers;
         return View();
     }
     [HttpPost]
-    public IActionResult Index(string EmployeeID)
+    public IActionResult Index(Employee emp)
     {
-        string strResult = "Xin chao" + EmployeeID ;
+        string strResult = "Xin chao" + emp.EmployeeID + "-" + emp.Age + "tuoi"  ;
         ViewBag.Thongbao = strResult;
         return View();
     }

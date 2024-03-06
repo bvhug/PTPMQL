@@ -14,7 +14,8 @@ public class PersonController : Controller
     [HttpPost]
     public IActionResult Welcome(Person ps)
     {
-        ViewBag.Thongbao = "xin chao" + ps.PersonID + "-" + ps.FullName + "-" + ps.Address;
+        string strResult = "xin chao" + ps.PersonID + "-" + ps.FullName + "-" + ps.Address;
+        ViewBag.Thongbao = strResult;
         return View();
     }
 }
