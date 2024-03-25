@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using BaiThucHanh.Models;
+using BaiThucHanh.Data;
+using Microsoft.EntityFrameworkCore;
 namespace BaiThucHanh.Controllers;
 public class PersonController : Controller
 {
