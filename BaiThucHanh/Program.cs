@@ -1,10 +1,9 @@
 using Microsoft.EntityFrameworkCore;
-using BaiThucHanh.Data;
 using Microsoft.Extensions.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<LTQDD>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("LTQDD") ?? throw new InvalidOperationException("Connection string 'LTQDD' not found.")));
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.")));
+builder.Services.AddDbContext<LTQDD>(options => options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.")));
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 

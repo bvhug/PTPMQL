@@ -9,8 +9,8 @@ using BaiThucHanh.Models;
     {
         public LTQDD (DbContextOptions<LTQDD> options)
             : base(options)
-        {
-        }
+        {}
 
         public DbSet<BaiThucHanh.Models.Student> Student { get; set; } = default!;
+        public DbSet<BaiThucHanh.Models.Person> Person { get; set; } = default!;
     }
