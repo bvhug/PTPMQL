@@ -53,7 +53,7 @@
     <div class="row">
         <div class="col-md-11">
             @Html.PagedListPager((IPagedList) Model, page => Url.Action("Index", new {page = page, pagesize = ViewBag.pszie}), 
-            new X.PagedList.Web.Common.PagedListRenderOptions { LiElementClasses = new string[] {"page-item"}, PageClasses = new string[] { "page-link" }})
+            new X.PagedList.Mvc.Core.PagedListRenderOptions { LiElementClasses = new string[] {"page-item"}, PageClasses = new string[] { "page-link" }})
         </div>
             <div class="col-md-1">
                 @Html.DropDownList("pagesize",null,new {@class="form-select"})

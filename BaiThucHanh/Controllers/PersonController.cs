@@ -23,11 +23,11 @@ namespace DemoMvc.Controllers
         {
             _context = context;
         }
-        public async Task<IActionResult> Index(int? page)
-        {
-            var model = _context.Person.ToList().ToPagedList(page ?? 1, 5);
-            return View(model);
-        }
+        // public async Task<IActionResult> Index(int? page)
+        // {
+        //     var model = _context.Person.ToList().ToPagedList(page ?? 1, 5);
+        //     return View(model);
+        // }
           public async Task<IActionResult> Index(int? page, int? pageSize)
         {
             ViewBag.pageSize = new List<SelectListItem>()
@@ -46,10 +46,10 @@ namespace DemoMvc.Controllers
         }
 
         // GET: Person
-        public async Task<IActionResult> Index()
-        {
-            return View(await _context.Person.ToListAsync());
-        }
+        // public async Task<IActionResult> Index()
+        // {
+        //     return View(await _context.Person.ToListAsync());
+        // }
 
         // GET: Person/Details/5
         public async Task<IActionResult> Details(string id)
